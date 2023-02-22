@@ -1,0 +1,433 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100%;
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.116);
+}
+
+
+
+button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 20px;
+    
+    width: 72px;
+    height: 100%;
+    background: #0d6efd;
+    transition: width 0.4s;
+}
+.sidebar_part{
+    width: 150px;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.116);
+    display: flex;
+    justify-content: center;
+   
+}
+
+body.open .sidebar {
+    width: 260px;
+}
+
+.sidebar-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    padding: 0 1.25rem 0 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header span {
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+    color: #ffffff;
+}
+
+.sidebar-burger {
+    width: 72px;
+    height: 72px;
+    display: grid;
+    place-items: center;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHN0cm9rZS13aWR0aD0iMS41IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgY29sb3I9IiNmZmZmZmYiPjxwYXRoIGQ9Ik0zIDVoMThNMyAxMmgxOE0zIDE5aDE4IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD48L3N2Zz4=) no-repeat center center;
+    transition: 0.3s;
+}
+
+body.open .sidebar-burger {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHN0cm9rZS13aWR0aD0iMS41IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgY29sb3I9IiNmZmZmZmYiPjxwYXRoIGQ9Ik02Ljc1OCAxNy4yNDNMMTIuMDAxIDEybTUuMjQzLTUuMjQzTDEyIDEybTAgMEw2Ljc1OCA2Ljc1N00xMi4wMDEgMTJsNS4yNDMgNS4yNDMiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9wYXRoPjwvc3ZnPg==) no-repeat no-repeat center center;
+}
+
+.sidebar-logo {
+    height: 20px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+body.open .sidebar-logo {
+    opacity: 1;
+}
+
+.sidebar-nav,
+sidebar-footer {
+    display: flex;
+    padding-top: 10px;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.sidebar-nav > button,
+.sidebar-footer > button {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding: 0 25px;
+}
+.sidebar-nav img{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(9deg) brightness(105%) contrast(102%);
+
+}
+.sidebar-footer img{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(9deg) brightness(105%) contrast(102%);
+}
+
+.sidebar button > svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar button > span {
+    color: #f9f9f9;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        translate: 0 10px;
+    }
+    100% {
+        opacity: 1;
+        translate: 0;
+    }
+}
+
+body.open .sidebar button > span {
+    opacity: 1;
+    animation: appear 0.3s both;
+}
+
+
+
+/* ####righteside### */
+
+.right_side{
+    width: 70%;
+    height: 100vh;
+   
+}
+
+
+
+/* -navbar- */
+#serch_bar{
+    
+    
+    border: 1px solid rgba(128, 128, 128, 0.485);
+    border-radius: 50px;
+
+}
+#input_search{
+    width: 140px;
+    border: none;
+    border-radius: 50px;
+}
+#button_search{
+    border: none;
+    border-radius: 50px;
+    
+}
+#button_search:hover{
+    background-color: white;
+    
+
+}
+.navbar-brand{
+    font-weight: 300;
+    
+}
+.navbar-brand span{
+    color:#475cd0 ;
+    font-size: 29px;
+    font-weight: 300;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ###cards1### */
+.card-deck{
+    min-height: 20vh;
+  
+}
+.card{
+    border-radius: 20px;
+}
+
+.cards{
+    display: flex;
+    min-height: 20vh;
+    padding: 7px;
+
+}
+.first_part{
+    width: 50%;
+    height: 20vh;
+
+    
+
+}
+.first_part h6{
+    font-size: 16px;
+    
+}
+.first_part h5{
+    font-weight: bold;
+}
+.first_part p{
+    font-size: 10px;
+   
+    color: rgba(128, 128, 128, 0.862);
+}
+.first_part p1{
+   
+    font-size: 12px;
+    
+}
+.second_part{
+    width: 50%;
+    height: 20vh;
+
+    
+
+}
+#image-card{
+   
+    width: 100%;
+    height: 12vh;
+
+}
+.second_part p1{
+    float: right;
+   margin-top: 17%;
+    font-size: 12px;
+    
+}
+
+
+/* ###cards2### */
+.card-part-2{
+    width: 100%;
+    min-height: 30vh;
+    
+    margin-top: 12px;
+    display: flex;
+   
+
+}
+#revanue{
+   margin-left: 15px;
+}
+#graf{
+    width: 100%;
+    height: 25vh;
+}
+#graf-2{
+    width: 100%;
+    height: 25vh;
+}
+#graf-1{
+    width: 40%;
+}
+#revanue{
+    width: 70%;
+}
+#expenses{
+    width: 40%;
+}
+
+
+
+
+
+/* ###cards3### */
+
+#expenses{
+
+    margin-left: 15px;
+}
+#transaction-history{
+    width: 100%;
+    height: 20vh;
+
+   
+}
+#expenses2{
+        width: 100%;
+        height: 20vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---profile_part--- */
+
+
+.profile_part{
+    width: 29%;
+    min-height: 100vh ;
+   
+    
+  
+}
+#nav{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    
+}
+#button-wallet{
+    width: 120px;
+    border-radius: 20px;
+    border-color: #475cd0;
+    color: #475cd0;
+
+}
+#button-wallet img{
+    filter: invert(32%) sepia(39%) saturate(2191%) hue-rotate(209deg) brightness(97%) contrast(89%);
+    
+}
+#button-notification{
+    margin-left: 20px;
+    width: 50px;
+    border-radius: 30px;
+    height: 40px;
+}
+
+
+.right-side-profile{
+    margin-left: 10%;
+    
+}
+
+
+
+
+
+
+
+
+
+/* .profile_part */
+
+.profile2{
+    text-align: center;
+}
+.profile{
+    width: 100%;
+    height: 15vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#toglle{
+    float:right ;
+    filter: invert(32%) sepia(39%) saturate(2191%) hue-rotate(209deg) brightness(97%) contrast(89%);
+
+}
+#profile-pic{
+    width: 70%;
+    height: 100px;
+    border-radius: 70px;
+    
+}
+.profile h5{
+
+    font-size: 18px;
+    font-weight: bold;
+}
+.profile p{
+    font-size: 10px;
+    color: gray;
+
+}
+
+#credit-card{
+    width: 100%;
+}
+
+.card{
+    margin-top: 15px;
+}
+
+#adding{
+    text-align: center;
+    font-size: 17px;
+    height: 10px;
+}
+#lastgraf{
+    width: 100%;
+    height: 20vh;
+}
+

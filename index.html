@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Dashbord</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <main><link rel="stylesheet" href="static/css/responsev.css"></main>
+  </head>
+  <body>
+    <!-- ###aside-bar## -->
+    <div class="sidebar_part">
+    <div class="sidebar">
+        
+    <div class="sidebar-inner">
+        <header class="sidebar-header">
+            <button
+                    type="button"
+                    class="sidebar-burger"
+                    onclick="toggleSidebar()"
+                    ></button>
+            <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2.5 21.5l4.5-.838A9.955 9.955 0 0012 22z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <span>Condrado</span>
+        </header>
+        <nav class="sidebar-nav">
+            <button type="button">
+                <img src="static/images/house.png" alt="">
+                <span>Home</span>
+            </button>
+            <button type="button">
+                <img src="static/images/graph.png" alt="">
+                <span style="animation-delay: 0.1s">Settings</span>
+            </button>
+            <button type="button">
+              <img src="static/images/credit-card.png" alt="">
+                <span style="animation-delay: 0.2s">Levels</span>
+            </button>
+            <button type="button">
+              <img src="static/images/clipboard.png" alt="">
+                <span style="animation-delay: 0.3s">Accounts</span>
+            </button>
+            <button type="button">
+              <img src="static/images/calendar.png" alt="">
+                <span style="animation-delay: 0.3s">Accounts</span>
+            </button>
+            <button type="button">
+              <img src="static/images/conection.png" alt="">
+                <span style="animation-delay: 0.3s">Accounts</span>
+            </button>
+            <button type="button">
+              <img src="static/images/email.png" alt="">
+                <span style="animation-delay: 0.3s">Accounts</span>
+            </button>
+            
+            
+
+            
+        </nav>
+        <div class="sidebar-footer">
+            <button type="button">
+              <img src="static/images/settings.png" alt="">
+                <span>Logout</span>
+            </button>
+        </div>
+    </div>
+
+    </div>
+</div>
+
+<!-- #right_side# -->
+<div class="right_side">
+    <!-- -navbar- -->
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">Welcome! <br> <span>Dashboared </span> </a>
+        <form id="serch_bar" class="form-inline my-2 my-lg-0">
+            <input id="input_search" class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button id="button_search" class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="static/images/search (1).png" alt=""></button>
+          </form>
+      </nav>
+
+      <!-- cards1#$ -->
+      <div class="card-deck">
+        <div class="card">
+            <div class="cards">
+            <div class="first_part">
+                <h6>Balance</h3>
+                <h5>$14 760.78</h2>
+                <p>6 April, 4 PM</p>
+                <p1>~43.12%</p1>
+            </div>
+            <div class="second_part">
+                <img id="image-card" src="static/images/Chart-JS.png" alt="">
+                <p1>+$8789.25</p1>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cards">
+                <div class="first_part">
+                    <h6>Saved Money </h3>
+                    <h5>$17 760.78</h2>
+                    <p>6 April, 4 PM</p>
+                    <p1>~25.12%</p1>
+                </div>
+                <div class="second_part">
+                    <img id="image-card" src="static/images/Chart-JS.png" alt="">
+                    <p1>+$8789.25</p1>
+                </div>
+                </div>
+          
+        </div>
+        <div class="card">
+            <div class="cards">
+                <div class="first_part">
+                    <h6>Arrearages</h6>
+                    <h5>$16 960.78</h2>
+                    <p>6 April, 4 PM</p>
+                    <p1>~3.12%</p1>
+                </div>
+                <div class="second_part">
+                    <img id="image-card" src="static/images/Chart-JS.png" alt="">
+                    <p1>+$8789.25</p1>
+                </div>
+                </div>
+          
+        </div>
+      </div>
+
+
+
+
+      <!-- cards2#$ -->
+      <div class="card-part-2">
+        <div id="graf-1" class="card">
+            <div class="card-body">
+              <img id="graf" src="static/images/portal_lojista_pos_pagamento_relatorio_result_graf_aut-c4f0c437fcb86e4c10fbabb9059a4488.png" alt="">
+              
+            </div>
+          </div>
+
+        
+        <div  id="revanue" class="card">
+            <div class="card-body">
+              <img id="graf-2" src="static/images/Chart-JS.png" alt="">
+            </div>
+          </div>
+          
+          
+
+      </div>
+ 
+      <!-- cards3#$ --><div class="card-part-2">
+        <div id="revanue" class="card ">
+            <div class="card-body">
+              <img id="transaction-history" src="static/images/connect_space_acls_1.png" alt="">
+            </div>
+          </div>
+          
+          <div id="expenses" class="card ">
+            <div class="card-body">
+              <img id="expenses2" src="static/images/images.png" alt="">
+            </div>
+          </div>
+
+      </div>
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="profile_part">
+  <nav id="nav" class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <button id="button-wallet" class="btn btn-outline-success" type="button"> <img src="static/images/wallet.png" alt=""> Wallet</button>
+      <button id="button-notification"  class="btn btn-sm btn-outline-secondary" type="button"><img src="static/images/bell.png" alt=""></button>
+    </form>
+  </nav>
+<div class="right-side-profile">
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <img id="toglle" src="static/images/icons8-menu-vertical-24.png" alt="">
+      <div class="profile">
+        <div class="profile2">
+        <img id="profile-pic" src="static/images/images.jpeg" alt="">
+        
+        <h5>Emily Blunt</h5>
+        <p>Friday,6 April 2023</p>
+      </div>
+
+
+      </div>
+      
+    </div>
+  </div>
+
+
+
+  <div id="card1" class="card" style="width: 18rem;">
+    
+      <img id="credit-card" src="static/images/credit-card-5591300__340.png" alt="">
+      
+    
+  </div>
+
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      
+      <p id="adding" class="card-text">Add Cart +</p>
+      
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      
+      <img id="lastgraf" src="static/images/WhichCountries2.png" alt="">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

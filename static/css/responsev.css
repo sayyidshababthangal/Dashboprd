@@ -1,0 +1,81 @@
+
+
+
+
+
+
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .right_side{
+        padding: 10px;
+    }
+    .sidebar_part{
+        display: none;
+    }
+    .navbar-brand{
+        font-size: 12px;
+    }
+    .navbar-brand span{
+        font-size: 15px;
+    }
+    #serch_bar{
+       height: 40px;
+       width: 160px;
+       
+
+        
+    }
+    #input_search{
+        height: 30px;
+        width: 100px;
+        background-color: transparent;
+    }
+    #button_search{
+        height: 30px;
+        width: 50px;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .card-deck{
+        display: flow-root;
+    }
+    .card-part-2{
+        display: flow-root;
+        width: 100%;
+        height: auto;
+        
+    }
+    #graf-1{
+        width: 100%;
+        height: auto;
+    }
+    #revanue{
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+    }
+    #expenses{
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+    }
+ 
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .profile_part{
+        display: none;
+    }
+    .right_side{
+        width: 100%;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
