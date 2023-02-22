@@ -74,12 +74,13 @@
 <!-- #right_side# -->
 <div class="right_side">
     <!-- -navbar- -->
-    <nav class="navbar navbar-light bg-light justify-content-between">
+    <nav class="navbar navbar-light  justify-content-between">
         <a class="navbar-brand">Welcome! <br> <span>Dashboared </span> </a>
         <form id="serch_bar" class="form-inline my-2 my-lg-0">
             <input id="input_search" class="form-control mr-sm-2" type="search" placeholder="Search">
             <button id="button_search" class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="static/images/search (1).png" alt=""></button>
           </form>
+          
       </nav>
 
       <!-- cards1#$ -->
@@ -90,9 +91,10 @@
                 <h6>Balance</h3>
                 <h5>$14 760.78</h2>
                 <p>6 April, 4 PM</p>
-                <p1>~43.12%</p1>
+                <p1><img class="profit" src="static/images/profits.png" alt="">43.12%</p1>
             </div>
             <div class="second_part">
+              <p id="heading">Wallet <img src="static/images/right-arrow.png" alt=""></p>
                 <img id="image-card" src="static/images/Chart-JS.png" alt="">
                 <p1>+$8789.25</p1>
             </div>
@@ -104,9 +106,10 @@
                     <h6>Saved Money </h3>
                     <h5>$17 760.78</h2>
                     <p>6 April, 4 PM</p>
-                    <p1>~25.12%</p1>
+                    <p1><img class="profit"  src="static/images/profits.png" alt="">25.12%</p1>
                 </div>
                 <div class="second_part">
+                  <p id="heading">Savings <img src="static/images/right-arrow.png" alt=""></p>
                     <img id="image-card" src="static/images/Chart-JS.png" alt="">
                     <p1>+$8789.25</p1>
                 </div>
@@ -119,9 +122,10 @@
                     <h6>Arrearages</h6>
                     <h5>$16 960.78</h2>
                     <p>6 April, 4 PM</p>
-                    <p1>~3.12%</p1>
+                    <p1> <img class="profit"  src="static/images/profits.png" alt=""> 3.12%</p1>
                 </div>
                 <div class="second_part">
+                  <p id="heading">Loans<img src="static/images/right-arrow.png" alt=""></p>
                     <img id="image-card" src="static/images/Chart-JS.png" alt="">
                     <p1>+$8789.25</p1>
                 </div>
@@ -137,7 +141,14 @@
       <div class="card-part-2">
         <div id="graf-1" class="card">
             <div class="card-body">
-              <img id="graf" src="static/images/portal_lojista_pos_pagamento_relatorio_result_graf_aut-c4f0c437fcb86e4c10fbabb9059a4488.png" alt="">
+              
+             <div id="Transactions">
+              <h5 id="card-head">Transactions <img  src="static/images/down-arrow.png" alt=""></h5> 
+              <div id="revanue-9">
+              <img id="drop-down" src="static/images/icons8-menu-vertical-24.png" alt="">
+             </div>
+            </div>
+            <img id="graf" src="static/images/portal_lojista_pos_pagamento_relatorio_result_graf_aut-c4f0c437fcb86e4c10fbabb9059a4488.png" alt="">
               
             </div>
           </div>
@@ -145,6 +156,12 @@
         
         <div  id="revanue" class="card">
             <div class="card-body">
+              <div id="Transactions">
+                <h5 id="card-head">Revenue </h5>
+                <div id="revanue-0">
+                <h5 id="revanue-4">Last Month<img  src="static/images/down-arrow.png" alt=""></h5>
+              </div>
+              </div >
               <img id="graf-2" src="static/images/Chart-JS.png" alt="">
             </div>
           </div>
@@ -156,12 +173,24 @@
       <!-- cards3#$ --><div class="card-part-2">
         <div id="revanue" class="card ">
             <div class="card-body">
-              <img id="transaction-history" src="static/images/connect_space_acls_1.png" alt="">
+              <div id="Transactions">
+                <h5 id="card-head">Transaction history </h5>
+                <div id="revanue-8">
+                <h5 id="revanue-4">Feb<img  src="static/images/down-arrow.png" alt=""></h5>
+              </div>
+              </div >
+              <img id="transaction-history" src="static/images/howtocreategalleryview1.jpg" alt="">
             </div>
           </div>
           
           <div id="expenses" class="card ">
             <div class="card-body">
+              <div id="Transactions">
+                <h5 id="card-head">Revenue </h5>
+                <div id="revanue-0">
+                <h5 id="revanue-4">Last Month<img  src="static/images/down-arrow.png" alt=""></h5>
+              </div>
+              </div >
               <img id="expenses2" src="static/images/images.png" alt="">
             </div>
           </div>
@@ -184,10 +213,10 @@
 
 </div>
 <div class="profile_part">
-  <nav id="nav" class="navbar navbar-light bg-light">
+  <nav id="nav" class="navbar navbar-light ">
     <form class="form-inline">
       <button id="button-wallet" class="btn btn-outline-success" type="button"> <img src="static/images/wallet.png" alt=""> Wallet</button>
-      <button id="button-notification"  class="btn btn-sm btn-outline-secondary" type="button"><img src="static/images/bell.png" alt=""></button>
+      <button id="button-notification"  class="btn btn-sm btn-outline-secondary" type="button"><img src="static/images/bell.png" alt=""><p id="notifivation-2">2</p></button>
     </form>
   </nav>
 <div class="right-side-profile">
@@ -197,7 +226,7 @@
       <img id="toglle" src="static/images/icons8-menu-vertical-24.png" alt="">
       <div class="profile">
         <div class="profile2">
-        <img id="profile-pic" src="static/images/images.jpeg" alt="">
+        <img id="profile-pic" src="static/images/canva-gamer-with-glasses-character-twitch-profile-picture-CVfgWIJGgRo.jpg" alt="">
         
         <h5>Emily Blunt</h5>
         <p>Friday,6 April 2023</p>
@@ -228,8 +257,30 @@
   </div>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
+      <div id="Transactions">
+                <h5 id="card-head">Revenue </h5>
+                <div id="revanue-0">
+                <h5 id="revanue-4">Last Month<img  src="static/images/down-arrow.png" alt=""></h5>
+              </div>
+              </div >
       
-      <img id="lastgraf" src="static/images/WhichCountries2.png" alt="">
+      <div id="progres-over">
+        
+      <h6>Trip</h6>
+    
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuemin="5%" aria-valuemax="5%"></div>
+      </div>
+      <h6>AirPods Max</h6>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <h6>Car</h6>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+      
       
     </div>
   </div>
